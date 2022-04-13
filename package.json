@@ -1,6 +1,6 @@
 {
   "name": "globacap-sendbird-uikit",
-  "version": "2.7.3",
+  "version": "2.7.4",
   "description": "React based UI kit for sendbird",
   "main": "dist/cjs/index.js",
   "style": "dist/index.css",
@@ -51,7 +51,8 @@
     "css-vars-ponyfill": "^2.3.2",
     "date-fns": "^2.16.1",
     "prop-types": "^15.7.2",
-    "sendbird": "^3.1.4"
+    "sendbird": "^3.1.4",
+    "lodash.debounce": "^4.0.8"
   },
   "bugs": {
     "url": "https://community.sendbird.com"
@@ -98,7 +99,6 @@
     "eslint-plugin-react-hooks": "^1.7.0",
     "jest": "^27.0.6",
     "jsdom": "^16.1.0",
-    "lodash.debounce": "^4.0.8",
     "node-sass": "^6.0.1",
     "np": "^7.5.0",
     "plop": "^2.5.3",
