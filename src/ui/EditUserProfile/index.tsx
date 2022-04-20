@@ -22,6 +22,7 @@ import { noop } from '../../utils/utils';
 interface Props {
   user: SendbirdTypes['User'];
   theme?: string;
+  userNameLabelText: string;
   onCancel(): void;
   onSubmit(newFile: File, newNickname: string): void;
   changeTheme?(theme: string): void;
@@ -33,6 +34,7 @@ export function EditUserProfile({
   theme = 'light',
   onCancel,
   onSubmit,
+  userNameLabelText,
   changeTheme = noop,
   onThemeChange = null,
 }: Props): ReactElement {
@@ -99,7 +101,7 @@ export function EditUserProfile({
         </section>
         <section className="sendbird-edit-user-profile__name">
           <InputLabel>
-            {stringSet.EDIT_PROFILE__NICKNAME_LABEL}
+            {userNameLabelText || stringSet.EDIT_PROFILE__NICKNAME_LABEL}
           </InputLabel>
           <Input
             required={user.nickname !== ''}

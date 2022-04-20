@@ -60,6 +60,7 @@ function ChannelList(props) {
     onChannelSearch,
     addChannelStringSet,
     channelPreviewStringSet,
+    editUserProfileStringSet,
   } = props;
   const { config = {} } = props;
   // enable if it is true atleast once(both are flase by default)
@@ -208,6 +209,7 @@ function ChannelList(props) {
                 }
               });
             }}
+            userNameLabelText={editUserProfileStringSet.userNameLabelText}
           />
         )
       }
@@ -422,6 +424,9 @@ ChannelList.propTypes = {
   channelPreviewStringSet: PropTypes.shape({
     leaveChannelText: PropTypes.string,
   }),
+  editUserProfileStringSet: PropTypes.shape({
+    userNameLabelText: PropTypes.string,
+  }),
   disableAutoSelect: PropTypes.bool,
   oneToOneChannel: PropTypes.bool,
   showChannelSearchBox: PropTypes.bool,
@@ -449,6 +454,9 @@ ChannelList.defaultProps = {
   },
   channelPreviewStringSet: {
     leaveChannelText: '',
+  },
+  editUserProfileStringSet: {
+    userNameLabelText: '',
   },
 };
 

@@ -264,6 +264,10 @@ export const ChannelListCustomStringSet = () => (
         channelPreviewStringSet={{
           leaveChannelText: 'Custom Leave Channel Text',
         }}
+        editUserProfileStringSet={{
+          userNameLabelText: 'Name',
+        }}
+        allowProfileEdit
       />
     </div>
   </Sendbird>
