@@ -16,7 +16,7 @@
   "App.js": {
     "bundled": 11072,
     "minified": 6757,
-    "gzipped": 2106,
+    "gzipped": 2105,
     "treeshaked": {
       "rollup": {
         "code": 1053,
@@ -30,7 +30,7 @@
   "SendbirdProvider.js": {
     "bundled": 24013,
     "minified": 13954,
-    "gzipped": 3904,
+    "gzipped": 3908,
     "treeshaked": {
       "rollup": {
         "code": 660,
@@ -44,7 +44,7 @@
   "ChannelSettings.js": {
     "bundled": 72898,
     "minified": 38736,
-    "gzipped": 6589,
+    "gzipped": 6587,
     "treeshaked": {
       "rollup": {
         "code": 30730,
@@ -56,16 +56,16 @@
     }
   },
   "ChannelList.js": {
-    "bundled": 72553,
-    "minified": 37558,
-    "gzipped": 9059,
+    "bundled": 72549,
+    "minified": 37631,
+    "gzipped": 9053,
     "treeshaked": {
       "rollup": {
-        "code": 29796,
+        "code": 29836,
         "import_statements": 878
       },
       "webpack": {
-        "code": 32774
+        "code": 32831
       }
     }
   },
@@ -77,7 +77,7 @@
   "OpenChannelSettings.js": {
     "bundled": 24762,
     "minified": 14680,
-    "gzipped": 3562,
+    "gzipped": 3558,
     "treeshaked": {
       "rollup": {
         "code": 11587,
@@ -91,7 +91,7 @@
   "MessageSearch.js": {
     "bundled": 20446,
     "minified": 10953,
-    "gzipped": 2940,
+    "gzipped": 2942,
     "treeshaked": {
       "rollup": {
         "code": 8773,
@@ -169,7 +169,7 @@
   "Channel.js": {
     "bundled": 178111,
     "minified": 93848,
-    "gzipped": 19734,
+    "gzipped": 19732,
     "treeshaked": {
       "rollup": {
         "code": 76738,
@@ -6469,6 +6469,253 @@
     "bundled": 105010,
     "minified": 82381,
     "gzipped": 17674,
+    "treeshaked": {
+      "rollup": {
+        "code": 65345,
+        "import_statements": 127
+      },
+      "webpack": {
+        "code": 72989
+      }
+    }
+  },
+  "LocalizationContext-3ce011dd.js": {
+    "bundled": 17486,
+    "minified": 12456,
+    "gzipped": 4182
+  },
+  "LeaveChannel-877e7528.js": {
+    "bundled": 10656,
+    "minified": 5860,
+    "gzipped": 1871
+  },
+  "actionTypes-02c84918.js": {
+    "bundled": 227,
+    "minified": 199,
+    "gzipped": 106
+  },
+  "index-2e24411c.js": {
+    "bundled": 57227,
+    "minified": 32222,
+    "gzipped": 5754
+  },
+  "index-894d62b7.js": {
+    "bundled": 23786,
+    "minified": 13099,
+    "gzipped": 3366
+  },
+  "index-164913fe.js": {
+    "bundled": 3259,
+    "minified": 1969,
+    "gzipped": 752
+  },
+  "index-7f4b87f9.js": {
+    "bundled": 1955,
+    "minified": 1288,
+    "gzipped": 575
+  },
+  "index-85369068.js": {
+    "bundled": 9245,
+    "minified": 5995,
+    "gzipped": 1651
+  },
+  "index-24a22609.js": {
+    "bundled": 17926,
+    "minified": 11953,
+    "gzipped": 2786
+  },
+  "utils-cf59c7e0.js": {
+    "bundled": 1083,
+    "minified": 641,
+    "gzipped": 300
+  },
+  "index-ba2bf387.js": {
+    "bundled": 9783,
+    "minified": 1776,
+    "gzipped": 680
+  },
+  "index-957ae01e.js": {
+    "bundled": 87416,
+    "minified": 25948,
+    "gzipped": 6453
+  },
+  "index-84f1aeda.js": {
+    "bundled": 109903,
+    "minified": 86534,
+    "gzipped": 17914
+  },
+  "LocalizationContext-5e17bf00.js": {
+    "bundled": 16869,
+    "minified": 11109,
+    "gzipped": 3682,
+    "treeshaked": {
+      "rollup": {
+        "code": 14,
+        "import_statements": 14
+      },
+      "webpack": {
+        "code": 5398
+      }
+    }
+  },
+  "index-a6e495f9.js": {
+    "bundled": 87247,
+    "minified": 25796,
+    "gzipped": 6438,
+    "treeshaked": {
+      "rollup": {
+        "code": 0,
+        "import_statements": 0
+      },
+      "webpack": {
+        "code": 7170
+      }
+    }
+  },
+  "utils-9610b6a1.js": {
+    "bundled": 1003,
+    "minified": 566,
+    "gzipped": 289,
+    "treeshaked": {
+      "rollup": {
+        "code": 0,
+        "import_statements": 0
+      },
+      "webpack": {
+        "code": 951
+      }
+    }
+  },
+  "actionTypes-09e47547.js": {
+    "bundled": 170,
+    "minified": 147,
+    "gzipped": 93,
+    "treeshaked": {
+      "rollup": {
+        "code": 0,
+        "import_statements": 0
+      },
+      "webpack": {
+        "code": 951
+      }
+    }
+  },
+  "index-2aeee7ec.js": {
+    "bundled": 2888,
+    "minified": 1678,
+    "gzipped": 698,
+    "treeshaked": {
+      "rollup": {
+        "code": 200,
+        "import_statements": 131
+      },
+      "webpack": {
+        "code": 1283
+      }
+    }
+  },
+  "index-dfa3c668.js": {
+    "bundled": 1747,
+    "minified": 1135,
+    "gzipped": 538,
+    "treeshaked": {
+      "rollup": {
+        "code": 70,
+        "import_statements": 70
+      },
+      "webpack": {
+        "code": 1120
+      }
+    }
+  },
+  "LeaveChannel-4dc1afba.js": {
+    "bundled": 9655,
+    "minified": 5008,
+    "gzipped": 1816,
+    "treeshaked": {
+      "rollup": {
+        "code": 381,
+        "import_statements": 166
+      },
+      "webpack": {
+        "code": 3736
+      }
+    }
+  },
+  "index-bd95daec.js": {
+    "bundled": 8150,
+    "minified": 5123,
+    "gzipped": 1614,
+    "treeshaked": {
+      "rollup": {
+        "code": 1051,
+        "import_statements": 198
+      },
+      "webpack": {
+        "code": 4927
+      }
+    }
+  },
+  "index-3f53a232.js": {
+    "bundled": 9759,
+    "minified": 1746,
+    "gzipped": 699,
+    "treeshaked": {
+      "rollup": {
+        "code": 28,
+        "import_statements": 28
+      },
+      "webpack": {
+        "code": 1012
+      }
+    }
+  },
+  "index-846a8cc8.js": {
+    "bundled": 22765,
+    "minified": 12153,
+    "gzipped": 3325,
+    "treeshaked": {
+      "rollup": {
+        "code": 42,
+        "import_statements": 42
+      },
+      "webpack": {
+        "code": 1026
+      }
+    }
+  },
+  "index-38b2f871.js": {
+    "bundled": 15803,
+    "minified": 10202,
+    "gzipped": 2769,
+    "treeshaked": {
+      "rollup": {
+        "code": 4039,
+        "import_statements": 367
+      },
+      "webpack": {
+        "code": 9243
+      }
+    }
+  },
+  "index-1a11cb75.js": {
+    "bundled": 52664,
+    "minified": 28300,
+    "gzipped": 5687,
+    "treeshaked": {
+      "rollup": {
+        "code": 5366,
+        "import_statements": 267
+      },
+      "webpack": {
+        "code": 16574
+      }
+    }
+  },
+  "index-716f08c8.js": {
+    "bundled": 105010,
+    "minified": 82381,
+    "gzipped": 17675,
     "treeshaked": {
       "rollup": {
         "code": 65345,

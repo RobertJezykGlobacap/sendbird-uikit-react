@@ -27,6 +27,8 @@ export default function AddChannel({
   userFilledApplicationUserListQuery,
   userListQuery,
   oneToOneChannel,
+  headerText,
+  groupLabelText,
 }) {
   const [showModal, setShowModal] = useState(false);
   const [step, setStep] = useState(0);
@@ -60,9 +62,9 @@ export default function AddChannel({
       {
         showModal && step === 0 && (
           <Modal
-            titleText={stringSet.MODAL__CHOOSE_CHANNEL_TYPE__TITLE}
+            titleText={headerText || stringSet.MODAL__CHOOSE_CHANNEL_TYPE__TITLE}
             hideFooter
-            onCancel={() => { setShowModal(false); }}
+            onCancel={() => setShowModal(false)}
             onSubmit={() => { }}
           >
             <div className="sendbird-add-channel__rectangle-wrap">
@@ -87,7 +89,7 @@ export default function AddChannel({
                   height="28px"
                 />
                 <Label type={LabelTypography.SUBTITLE_1} color={LabelColors.ONBACKGROUND_1}>
-                  {stringSet.MODAL__CHOOSE_CHANNEL_TYPE__GROUP}
+                  {groupLabelText || stringSet.MODAL__CHOOSE_CHANNEL_TYPE__GROUP}
                 </Label>
               </div>
               {
@@ -193,19 +195,23 @@ AddChannel.propTypes = {
     getErrorFirstCallback: PropTypes.func,
     createApplicationUserListQuery: PropTypes.func,
   }).isRequired,
-  disabled: PropTypes.bool,
   channelListDispatcher: PropTypes.func.isRequired,
   userFilledApplicationUserListQuery: PropTypes.shape({}),
   onBeforeCreateChannel: PropTypes.func,
   userId: PropTypes.string.isRequired,
   userListQuery: PropTypes.func,
+  headerText: PropTypes.string,
+  groupLabelText: PropTypes.string,
   oneToOneChannel: PropTypes.bool,
+  disabled: PropTypes.bool,
 };
 
 AddChannel.defaultProps = {
-  disabled: false,
   userFilledApplicationUserListQuery: {},
   onBeforeCreateChannel: null,
   userListQuery: null,
+  headerText: '',
+  groupLabelText: '',
   oneToOneChannel: false,
+  disabled: false,
 };

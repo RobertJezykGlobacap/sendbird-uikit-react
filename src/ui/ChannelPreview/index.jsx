@@ -25,6 +25,8 @@ export default function ChannelPreview({
   } = currentUser;
   const { isBroadcast, isFrozen } = channel;
   const { stringSet, dateLocale } = useContext(LocalizationContext);
+  const totalMembersCount = utils.getTotalMembers(channel);
+
   return (
     <div
       className={[
@@ -68,13 +70,15 @@ export default function ChannelPreview({
             >
               {utils.getChannelTitle(channel, userId, stringSet)}
             </Label>
-            <Label
-              className="sendbird-channel-preview__content__upper__header__total-members"
-              type={LabelTypography.CAPTION_2}
-              color={LabelColors.ONBACKGROUND_2}
-            >
-              {utils.getTotalMembers(channel)}
-            </Label>
+            {totalMembersCount > 2 && (
+              <Label
+                className="sendbird-channel-preview__content__upper__header__total-members"
+                type={LabelTypography.CAPTION_2}
+                color={LabelColors.ONBACKGROUND_2}
+              >
+                {totalMembersCount}
+              </Label>
+            )}
             {
               isFrozen
               && (

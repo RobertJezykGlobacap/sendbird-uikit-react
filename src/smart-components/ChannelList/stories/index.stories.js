@@ -249,3 +249,22 @@ export const QueryParamsForChannelList = () => {
     </Sendbird>
   );
 };
+
+export const ChannelListCustomStringSet = () => (
+  <Sendbird
+    appId={appId}
+    userId={userId}
+  >
+    <div style={{ height: '100vh' }}>
+      <ChannelList
+        addChannelStringSet={{
+          headerText: 'Custom Header',
+          groupLabelText: 'Custom Group Label',
+        }}
+        channelPreviewStringSet={{
+          leaveChannelText: 'Custom Leave Channel Text',
+        }}
+      />
+    </div>
+  </Sendbird>
+);

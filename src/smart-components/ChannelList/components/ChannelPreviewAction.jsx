@@ -11,7 +11,7 @@ import IconButton from '../../../ui/IconButton';
 import Icon, { IconTypes, IconColors } from '../../../ui/Icon';
 import LeaveChannelModal from '../../ChannelSettings/components/LeaveChannel';
 
-export default function ChannelPreviewAction({ disabled, onLeaveChannel }) {
+export default function ChannelPreviewAction({ disabled, onLeaveChannel, actionLabelText }) {
   const parentRef = useRef(null);
   const [showModal, setShowModal] = useState(false);
   const { stringSet } = useContext(LocalizationContext);
@@ -53,7 +53,7 @@ export default function ChannelPreviewAction({ disabled, onLeaveChannel }) {
                 closeDropdown();
               }}
             >
-              {stringSet.CHANNEL_SETTING__LEAVE_CHANNEL__TITLE}
+              {actionLabelText || stringSet.CHANNEL_SETTING__LEAVE_CHANNEL__TITLE}
             </MenuItem>
           </MenuItems>
         )}
@@ -73,8 +73,10 @@ export default function ChannelPreviewAction({ disabled, onLeaveChannel }) {
 ChannelPreviewAction.propTypes = {
   disabled: PropTypes.bool,
   onLeaveChannel: PropTypes.func.isRequired,
+  actionLabelText: PropTypes.string,
 };
 
 ChannelPreviewAction.defaultProps = {
   disabled: false,
+  actionLabelText: '',
 };

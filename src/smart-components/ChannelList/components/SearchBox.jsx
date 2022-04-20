@@ -55,7 +55,7 @@ const SearchBox = ({ onChannelSearch, debounceInMilliseconds, ...domAttributes }
           placeholder={stringSet.SEARCH}
           ref={searchRef}
           onChange={debouncedHandleOnChange}
-          {...domAttributes} // eslint-disable react/jsx-props-no-spreading
+          {...domAttributes} // eslint-disable-line react/jsx-props-no-spreading
         />
         {channelSearchString && (
           <Icon

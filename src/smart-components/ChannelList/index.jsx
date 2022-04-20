@@ -58,6 +58,8 @@ function ChannelList(props) {
     oneToOneChannel,
     showChannelSearchBox,
     onChannelSearch,
+    addChannelStringSet,
+    channelPreviewStringSet,
   } = props;
   const { config = {} } = props;
   // enable if it is true atleast once(both are flase by default)
@@ -184,6 +186,8 @@ function ChannelList(props) {
               channelListDispatcher={channelListDispatcher}
               userId={userId}
               userFilledApplicationUserListQuery={userFilledApplicationUserListQuery}
+              headerText={addChannelStringSet.headerText}
+              groupLabelText={addChannelStringSet.groupLabelText}
               onBeforeCreateChannel={onBeforeCreateChannel}
               oneToOneChannel={oneToOneChannel}
             />
@@ -315,6 +319,7 @@ function ChannelList(props) {
                         <ChannelPreviewAction
                           disabled={!isOnline}
                           onLeaveChannel={() => onLeaveChannel(channel)}
+                          actionLabelText={channelPreviewStringSet.leaveChannelText}
                         />
                       )}
                     />
@@ -409,10 +414,17 @@ ChannelList.propTypes = {
     PropTypes.func,
   ]),
   onChannelSelect: PropTypes.func,
+  onChannelSearch: PropTypes.func,
+  addChannelStringSet: PropTypes.shape({
+    headerText: PropTypes.string,
+    groupLabelText: PropTypes.string,
+  }),
+  channelPreviewStringSet: PropTypes.shape({
+    leaveChannelText: PropTypes.string,
+  }),
   disableAutoSelect: PropTypes.bool,
   oneToOneChannel: PropTypes.bool,
   showChannelSearchBox: PropTypes.bool,
-  onChannelSearch: PropTypes.func,
 };
 
 ChannelList.defaultProps = {
@@ -431,6 +443,13 @@ ChannelList.defaultProps = {
   oneToOneChannel: false,
   showChannelSearchBox: false,
   onChannelSearch: noop,
+  addChannelStringSet: {
+    headerText: '',
+    groupLabelText: '',
+  },
+  channelPreviewStringSet: {
+    leaveChannelText: '',
+  },
 };
 
 export default withSendbirdContext(ChannelList);
