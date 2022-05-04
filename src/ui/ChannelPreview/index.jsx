@@ -23,7 +23,7 @@ export default function ChannelPreview({
   const {
     userId,
   } = currentUser;
-  const { isBroadcast, isFrozen } = channel;
+  const { isBroadcast, isFrozen, url } = channel;
   const { stringSet, dateLocale } = useContext(LocalizationContext);
   const totalMembersCount = utils.getTotalMembers(channel);
 
@@ -37,6 +37,7 @@ export default function ChannelPreview({
       onClick={onClick}
       onKeyPress={onClick}
       tabIndex={tabIndex}
+      data-channel-url={url}
     >
       <div
         className="sendbird-channel-preview__avatar"
@@ -133,6 +134,7 @@ ChannelPreview.propTypes = {
     coverUrl: PropTypes.string,
     isBroadcast: PropTypes.bool,
     isFrozen: PropTypes.bool,
+    url: PropTypes.string,
   }),
   currentUser: PropTypes.shape({
     userId: PropTypes.string,

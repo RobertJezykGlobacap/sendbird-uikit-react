@@ -7,3 +7,5 @@ Globacap fork of [sendbird-uikit](https://www.npmjs.com/package/globacap-sendbir
 - `<ChannelList />` got added string set for `<ChannelPreviewAction />` component text nodes. Prop `channelPreviewStringSet` is an object containing a key: `leaveChannelText`
 - `<ChannelList />` got added string set for `<EditUserProfile />` modal text nodes. Prop `editUserProfileStringSet` is an object containing a key: `userNameLabelText`
 - total members count in `<ChannelPreview />` will not show if it's lower than 3
+- `disableUserProfileNameChange` prop added for `<ChannelList />` for disabling/enabling editiing User Profile name
+- `data-channel-url` custom data attribute rendered into the DOM in ChannelPreview component for easier debugging/logging

@@ -23,6 +23,7 @@ interface Props {
   user: SendbirdTypes['User'];
   theme?: string;
   userNameLabelText: string;
+  disableUserProfileNameChange: boolean;
   onCancel(): void;
   onSubmit(newFile: File, newNickname: string): void;
   changeTheme?(theme: string): void;
@@ -35,6 +36,7 @@ export function EditUserProfile({
   onCancel,
   onSubmit,
   userNameLabelText,
+  disableUserProfileNameChange,
   changeTheme = noop,
   onThemeChange = null,
 }: Props): ReactElement {
@@ -109,6 +111,7 @@ export function EditUserProfile({
             ref={inputRef}
             value={user.nickname}
             placeHolder={stringSet.EDIT_PROFILE__NICKNAME_PLACEHOLDER}
+            disabled={disableUserProfileNameChange}
           />
         </section>
         <section className="sendbird-edit-user-profile__userid">

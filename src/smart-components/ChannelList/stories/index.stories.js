@@ -10,13 +10,15 @@ import withSendBird from '../../../lib/SendbirdSdkContext';
 
 export default { title: 'ChannelList' };
 
+const defaultQueries = { channelListQuery: {includeEmpty: true} };
+
 export const IndependentChannelList = () => (
   <Sendbird
     appId={appId}
     userId={userId}
   >
     <div style={{ height: '100vh' }}>
-      <ChannelList />
+      <ChannelList queries={defaultQueries} />
     </div>
   </Sendbird>
 );
@@ -61,7 +63,7 @@ export const OneToOneChannelList = () => (
     userId={userId}
   >
     <div style={{ height: '100vh' }}>
-      <ChannelList oneToOneChannel />
+      <ChannelList queries={defaultQueries} oneToOneChannel />
     </div>
   </Sendbird>
 );
@@ -86,6 +88,7 @@ export const CustomChannelPreview = () => (
     <div style={{ height: '520px' }}>
       <ChannelList
         renderChannelPreview={MyCustomPreview}
+        queries={defaultQueries}
         onChannelSelect={(c) => { console.warn(c); }}
       />
     </div>
@@ -99,6 +102,7 @@ export const DisableUserProfile = () => (
   >
     <div style={{ height: '520px' }}>
       <ChannelList
+        queries={defaultQueries}
         disableUserProfile
       />
     </div>
@@ -112,6 +116,7 @@ export const RenderUserProfile = () => (
   >
     <div style={{ height: '520px' }}>
       <ChannelList
+        queries={defaultQueries}
         renderUserProfile={({ user }) => (
           <div>{user.userId}</div>
         )}
@@ -131,6 +136,7 @@ export const CustomChannelListHeader = () => (
   >
     <div style={{ height: '520px' }}>
       <ChannelList
+        queries={defaultQueries}
         renderHeader={MyCustomHeader}
         onChannelSelect={(c) => { console.warn(c); }}
       />
@@ -167,6 +173,7 @@ export const CustomSort = () => {
     >
       <div style={{ height: '520px' }}>
         <ChannelList
+          queries={defaultQueries}
           sortChannelList={channelSort}
         />
       </div>
@@ -180,7 +187,7 @@ export const EditProfile = () => (
   >
     <div style={{ height: '520px' }}>
       <ChannelList
-        allowProfileEdit
+        queries={defaultQueries}
         onThemeChange={(theme) => {
           alert(`New theme is: ${theme}`);
         }}
@@ -188,6 +195,8 @@ export const EditProfile = () => (
           alert(`New nickname is: ${user.nickname}`);
         }}
         onChannelSelect={(c) => { console.warn(c); }}
+        allowProfileEdit
+        disableUserProfileNameChange
       />
     </div>
   </Sendbird>
@@ -196,6 +205,7 @@ export const EditProfile = () => (
 const ChannelWithOnBeforeCreateChannel = ({ sdk }) => (
   <div style={{ height: '520px' }}>
     <ChannelList
+      queries={defaultQueries}
       onBeforeCreateChannel={(selectedUsers) => {
         if (!sdk || !sdk.GroupChannelParams) { return }
         const params = new sdk.GroupChannelParams();
@@ -257,6 +267,7 @@ export const ChannelListCustomStringSet = () => (
   >
     <div style={{ height: '100vh' }}>
       <ChannelList
+        queries={defaultQueries}
         addChannelStringSet={{
           headerText: 'Custom Header',
           groupLabelText: 'Custom Group Label',
