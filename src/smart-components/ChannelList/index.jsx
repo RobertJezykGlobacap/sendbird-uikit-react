@@ -50,6 +50,7 @@ function ChannelList(props) {
     renderUserProfile,
     disableUserProfile,
     disableUserProfileNameChange,
+    showChangeThemeToggle,
     allowProfileEdit,
     sortChannelList,
     onProfileEditSuccess,
@@ -202,6 +203,7 @@ function ChannelList(props) {
           <EditUserProfile
             onThemeChange={onThemeChange}
             disableUserProfileNameChange={disableUserProfileNameChange}
+            showChangeThemeToggle={showChangeThemeToggle}
             user={user}
             onCancel={() => { setShowProfileEdit(false); }}
             onSubmit={(newName, newFile) => {
@@ -421,6 +423,7 @@ ChannelList.propTypes = {
   ]),
   disableUserProfile: PropTypes.bool,
   disableUserProfileNameChange: PropTypes.bool,
+  showChangeThemeToggle: PropTypes.bool,
   renderUserProfile: PropTypes.func,
   allowProfileEdit: PropTypes.bool,
   sortChannelList: PropTypes.func,
@@ -453,6 +456,7 @@ ChannelList.defaultProps = {
   renderHeader: null,
   disableUserProfile: false,
   disableUserProfileNameChange: false,
+  showChangeThemeToggle: false,
   renderUserProfile: null,
   allowProfileEdit: false,
   onThemeChange: null,

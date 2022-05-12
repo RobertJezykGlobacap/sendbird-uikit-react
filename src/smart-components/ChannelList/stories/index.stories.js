@@ -197,6 +197,7 @@ export const EditProfile = () => (
         onChannelSelect={(c) => { console.info(c); }}
         allowProfileEdit
         disableUserProfileNameChange
+        showChangeThemeToggle
       />
     </div>
   </Sendbird>

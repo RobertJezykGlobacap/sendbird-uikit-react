@@ -24,6 +24,7 @@ interface Props {
   theme?: string;
   userNameLabelText: string;
   disableUserProfileNameChange: boolean;
+  showChangeThemeToggle: boolean;
   onCancel(): void;
   onSubmit(newFile: File, newNickname: string): void;
   changeTheme?(theme: string): void;
@@ -37,6 +38,7 @@ export function EditUserProfile({
   onSubmit,
   userNameLabelText,
   disableUserProfileNameChange,
+  showChangeThemeToggle = false,
   changeTheme = noop,
   onThemeChange = null,
 }: Props): ReactElement {
@@ -125,42 +127,44 @@ export function EditUserProfile({
             value={user.userId}
           />
         </section>
-        <section className="sendbird-edit-user-profile__theme">
-          <InputLabel>
-            {stringSet.EDIT_PROFILE__THEME_LABEL}
-          </InputLabel>
-          <div className="sendbird-edit-user-profile__theme__theme-icon">
-            {
-              theme === 'dark'
-                ? (
-                  <Icon
-                    onClick={() => {
-                      changeTheme('light');
-                      if (onThemeChange && typeof onThemeChange === 'function') {
-                        onThemeChange('light');
-                      }
-                    }}
-                    type={IconTypes.TOGGLE_ON}
-                    width={44}
-                    height={24}
-                  />
-                )
-                : (
-                  <Icon
-                    onClick={() => {
-                      changeTheme('dark');
-                      if (onThemeChange && typeof onThemeChange === 'function') {
-                        onThemeChange('dark');
-                      }
-                    }}
-                    type={IconTypes.TOGGLE_OFF}
-                    width={44}
-                    height={24}
-                  />
-                )
-            }
-          </div>
-        </section>
+        {showChangeThemeToggle && (
+          <section className="sendbird-edit-user-profile__theme">
+            <InputLabel>
+              {stringSet.EDIT_PROFILE__THEME_LABEL}
+            </InputLabel>
+            <div className="sendbird-edit-user-profile__theme__theme-icon">
+              {
+                theme === 'dark'
+                  ? (
+                    <Icon
+                      onClick={() => {
+                        changeTheme('light');
+                        if (onThemeChange && typeof onThemeChange === 'function') {
+                          onThemeChange('light');
+                        }
+                      }}
+                      type={IconTypes.TOGGLE_ON}
+                      width={44}
+                      height={24}
+                    />
+                  )
+                  : (
+                    <Icon
+                      onClick={() => {
+                        changeTheme('dark');
+                        if (onThemeChange && typeof onThemeChange === 'function') {
+                          onThemeChange('dark');
+                        }
+                      }}
+                      type={IconTypes.TOGGLE_OFF}
+                      width={44}
+                      height={24}
+                    />
+                  )
+              }
+            </div>
+          </section>
+        )}
       </form>
     </Modal>
   );
