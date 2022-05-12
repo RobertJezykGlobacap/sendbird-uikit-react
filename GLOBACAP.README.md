@@ -9,3 +9,4 @@ Globacap fork of [sendbird-uikit](https://www.npmjs.com/package/globacap-sendbir
 - total members count in `<ChannelPreview />` will not show if it's lower than 3
 - `disableUserProfileNameChange` prop added for `<ChannelList />` for disabling/enabling editiing User Profile name
 - `data-channel-url` custom data attribute rendered into the DOM in ChannelPreview component for easier debugging/logging
+- changes for suppressing `markAsDelivered` error on an origin branch in v2.7.1, brought to the fork, to keep fork in sync with a source and get rid of console error - [v2.7.1 changes](https://github.com/sendbird/sendbird-uikit-react/pull/143/files)

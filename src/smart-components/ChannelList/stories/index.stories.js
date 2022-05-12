@@ -89,7 +89,7 @@ export const CustomChannelPreview = () => (
       <ChannelList
         renderChannelPreview={MyCustomPreview}
         queries={defaultQueries}
-        onChannelSelect={(c) => { console.warn(c); }}
+        onChannelSelect={(c) => { console.info(c); }}
       />
     </div>
   </Sendbird>
@@ -138,7 +138,7 @@ export const CustomChannelListHeader = () => (
       <ChannelList
         queries={defaultQueries}
         renderHeader={MyCustomHeader}
-        onChannelSelect={(c) => { console.warn(c); }}
+        onChannelSelect={(c) => { console.info(c); }}
       />
     </div>
   </Sendbird>
@@ -194,7 +194,7 @@ export const EditProfile = () => (
         onProfileEditSuccess={(user) => {
           alert(`New nickname is: ${user.nickname}`);
         }}
-        onChannelSelect={(c) => { console.warn(c); }}
+        onChannelSelect={(c) => { console.info(c); }}
         allowProfileEdit
         disableUserProfileNameChange
       />
