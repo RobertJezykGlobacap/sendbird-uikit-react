@@ -7,9 +7,11 @@ export default function Checkbox({
   id,
   checked,
   onChange,
+  labelStyles,
 }) {
   return (
-    <label className="sendbird-checkbox" htmlFor={id}>
+    // eslint-disable-next-line react/jsx-props-no-spreading
+    <label className="sendbird-checkbox" htmlFor={id} {...labelStyles}>
       <input
         id={id}
         type="checkbox"
@@ -25,10 +27,12 @@ Checkbox.propTypes = {
   id: PropTypes.string,
   checked: PropTypes.bool,
   onChange: PropTypes.func,
+  labelStyles: PropTypes.object,
 };
 
 Checkbox.defaultProps = {
   id: 'sendbird-checkbox-input',
   checked: false,
   onChange: () => { },
+  labelStyles: {},
 };

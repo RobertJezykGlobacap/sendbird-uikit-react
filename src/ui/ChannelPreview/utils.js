@@ -70,6 +70,6 @@ export const getChannelUnreadMessageCount = (channel) => (
 
 export const getEmailAddress = (channel, currentUserId) => {
   const { members } = channel;
-  
+
   return members?.length === 2 ? members.find(({ userId }) => userId !== currentUserId).metaData.email : '';
-}
+};
