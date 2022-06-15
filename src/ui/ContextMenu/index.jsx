@@ -70,7 +70,7 @@ export default function ContextMenu({ menuTrigger, menuItems }) {
   const [showMenu, setShowMenu] = useState(false);
 
   return (
-    <div className="sendbird-context-menu" style={{ display: 'inline' }}>
+    <div className="sendbird-context-menu">
       {menuTrigger(() => setShowMenu(!showMenu))}
       {showMenu && menuItems(() => setShowMenu(false))}
     </div>

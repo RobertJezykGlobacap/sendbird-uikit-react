@@ -1,20 +1,15 @@
 @import '../../styles/variables';
 
 .sendbird-user-list-item {
-  display: block;
-  position: relative;
+  display: flex;
   box-sizing: border-box;
-  width: 432px;
-  height: 56px;
+  height: 60px;
   @include themed() {
     border-bottom: 1px solid t(on-bg-4);
     background-color: t(bg--0-5);
   }
 
   &__avatar {
-    position: absolute;
-    top: 8px;
-    left: 0px;
     z-index: 1;
     cursor: pointer;
   }
@@ -28,13 +23,23 @@
   }
 
   &__title {
-    position: absolute;
-    top: 17px;
-    left: 56px;
     max-width: 280px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    margin-right: auto;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__email {
+    @include themed() {
+      color: t(on-bg-3);
+    }
+    font-family: var(--sendbird-font-family-default);
+    font-size: 13px;
   }
 
   &__subtitle {
@@ -48,9 +53,10 @@
   }
 
   &__checkbox {
-    position: absolute;
-    top: 16px;
-    right: 16px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   &__action {

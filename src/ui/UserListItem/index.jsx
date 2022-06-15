@@ -23,6 +23,8 @@ export default function UserListItem({
   action,
 }) {
   const uniqueKey = user.userId;
+  const userEmail = user.metaData.email;
+
   const actionRef = React.useRef(null);
   const parentRef = React.useRef(null);
   const avatarRef = React.useRef(null);
@@ -88,18 +90,20 @@ export default function UserListItem({
           </MenuItems>
         )}
       />
-      <Label
-        className="sendbird-user-list-item__title"
-        type={LabelTypography.SUBTITLE_1}
-        color={LabelColors.ONBACKGROUND_1}
-      >
-        {user.nickname || stringSet.NO_NAME}
-        {
-          (currentUser === user.userId) && (
-            ' (You)'
-          )
-        }
-      </Label>
+      <div className="sendbird-user-list-item__title">
+        <Label
+          type={LabelTypography.SUBTITLE_1}
+          color={LabelColors.ONBACKGROUND_1}
+        >
+          {user.nickname || stringSet.NO_NAME}
+          {
+            (currentUser === user.userId) && (
+              ' (You)'
+            )
+          }
+        </Label>
+        {userEmail && <span className="sendbird-user-list-item__email">{userEmail}</span>}
+      </div>
       { // if there is now nickname, display userId
         !user.nickname && (
           <Label
@@ -122,6 +126,12 @@ export default function UserListItem({
               id={uniqueKey}
               checked={checked}
               onChange={(event) => onChange(event)}
+              labelStyles={{
+                width: '22px',
+                height: '22px',
+                paddingLeft: 0,
+                marginBottom: 0,
+              }}
             />
           </label>
         )
@@ -162,6 +172,9 @@ UserListItem.propTypes = {
     isMuted: PropTypes.bool,
     nickname: PropTypes.string,
     profileUrl: PropTypes.string,
+    metaData: PropTypes.shape({
+      email: PropTypes.string,
+    }),
   }).isRequired,
   disableMessaging: PropTypes.bool,
   currentUser: PropTypes.string,

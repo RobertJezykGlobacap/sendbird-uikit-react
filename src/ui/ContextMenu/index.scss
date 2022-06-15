@@ -5,6 +5,12 @@ body.sendbird-menu-items-pop-up {
   overflow: hidden !important;
 }
 
+.sendbird-context-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .sendbird__offline {
   .sendbird-dropdown__menu .sendbird-dropdown__menu-item {
     cursor: not-allowed;
