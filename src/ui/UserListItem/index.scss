@@ -35,7 +35,9 @@
   }
 
   &__email {
-    color: var(--sendbird-light-onlight-03);
+    @include themed() {
+      color: t(on-bg-3);
+    }
     font-family: var(--sendbird-font-family-default);
     font-size: 13px;
   }
