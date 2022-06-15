@@ -147,11 +147,11 @@ MenuItems.propTypes = {
   // https://stackoverflow.com/a/51127130
   parentRef: PropTypes.oneOfType([
     PropTypes.func,
-    PropTypes.shape({ current: PropTypes.instanceOf(PropTypes.element) }),
+    PropTypes.object,
   ]).isRequired,
   parentContainRef: PropTypes.oneOfType([
     PropTypes.func,
-    PropTypes.shape({ current: PropTypes.instanceOf(PropTypes.element) }),
+    PropTypes.object,
   ]).isRequired,
   openLeft: PropTypes.bool,
 };
