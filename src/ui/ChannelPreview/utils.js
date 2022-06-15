@@ -8,17 +8,19 @@ import { truncateString } from '../../utils';
 import { LabelStringSet } from '../Label';
 
 export const getChannelTitle = (channel = {}, currentUserId, stringSet = LabelStringSet) => {
-  if (!channel || (!channel.name && !channel.members)) {
+  const { name, members } = channel;
+
+  if (!channel || (!name && !members)) {
     return stringSet.NO_TITLE;
   }
-  if (channel.name && channel.name !== 'Group Channel') {
-    return channel.name;
+  if (name && name !== 'Group Channel') {
+    return name;
   }
-  if (channel.members.length === 1) {
+  if (members.length === 1) {
     return stringSet.NO_MEMBERS;
   }
 
-  return channel.members
+  return members
     .filter(({ userId }) => userId !== currentUserId)
     .map(({ nickname }) => (nickname || stringSet.NO_NAME))
     .join(', ');
@@ -65,3 +67,9 @@ export const getChannelUnreadMessageCount = (channel) => (
     ? channel.unreadMessageCount
     : 0
 );
+
+export const getEmailAddress = (channel, currentUserId) => {
+  const { members } = channel;
+  
+  return members?.length === 2 ? members.find(({ userId }) => userId !== currentUserId).metaData.email : '';
+}

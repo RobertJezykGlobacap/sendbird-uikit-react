@@ -108,7 +108,7 @@ export default function ChannelPreview({
             type={LabelTypography.BODY_2}
             color={LabelColors.ONBACKGROUND_3}
           >
-            {utils.getLastMessage(channel)}
+            {utils.getEmailAddress(channel, userId)}
           </Label>
           <div className="sendbird-channel-preview__content__lower__unread-message-count">
             {
