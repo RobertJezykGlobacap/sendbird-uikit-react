@@ -11,7 +11,7 @@ export default function Checkbox({
 }) {
   return (
     // eslint-disable-next-line react/jsx-props-no-spreading
-    <label className="sendbird-checkbox" htmlFor={id} style={{...labelStyles}}>
+    <label className="sendbird-checkbox" htmlFor={id} style={{ ...labelStyles }}>
       <input
         id={id}
         type="checkbox"
