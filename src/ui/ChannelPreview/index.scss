@@ -76,7 +76,7 @@
     .sendbird-channel-preview__content__lower {
       margin-top: 3px;
       width: 216px;
-      height: 20px;
+      max-height: 20px;
       display: flex;
       justify-content: space-between;
 
@@ -87,7 +87,7 @@
 
       .sendbird-channel-preview__content__lower__unread-message-count {
         margin-left: 8px;
-        height: 20px;
+        max-height: 20px;
       }
     }
   }
