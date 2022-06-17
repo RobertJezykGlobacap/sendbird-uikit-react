@@ -33,11 +33,6 @@ describe('ChatHeader', () => {
     ).toEqual(title);
 
     expect(
-      component.find('.sendbird-chat-header__left__subtitle').hostNodes().text()
-    ).toEqual(subTitle);
-
-
-    expect(
       component.find('.sendbird-chat-header__right__mute').exists()
     ).toBeTruthy();
 
@@ -54,10 +49,6 @@ describe('ChatHeader', () => {
     expect(
       component.find('.sendbird-chat-header__left__title').hostNodes().text()
     ).toEqual(LabelStringSet.NO_TITLE);
-
-    expect(
-      component.find('.sendbird-chat-header__left__subtitle').hostNodes().text()
-    ).toEqual('');
 
     expect(
       component.find('.sendbird-chat-header__right__mute').exists()

@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 
 import './index.scss';
-import * as utils from './utils';
+import { getChannelTitle, getChannelSubTitle } from './utils';
 
 import { LocalizationContext } from '../../lib/LocalizationContext';
 import Label, { LabelTypography, LabelColors } from '../Label';
@@ -41,15 +41,17 @@ export default function ChatHeader(props) {
           type={LabelTypography.H_2}
           color={LabelColors.ONBACKGROUND_1}
         >
-          {title || utils.getChannelTitle(currentGroupChannel, userId, stringSet)}
+          {title || getChannelTitle(currentGroupChannel, userId, stringSet)}
         </Label>
-        <Label
-          className="sendbird-chat-header__left__subtitle"
-          type={LabelTypography.BODY_1}
-          color={LabelColors.ONBACKGROUND_2}
-        >
-          {subTitle}
-        </Label>
+        {subTitle && (
+          <Label
+            className="sendbird-chat-header__left__subtitle"
+            type={LabelTypography.BODY_1}
+            color={LabelColors.ONBACKGROUND_2}
+          >
+            {getChannelSubTitle(currentGroupChannel, userId, stringSet)}
+          </Label>
+        )}
       </div>
       <div className="sendbird-chat-header__right">
         {

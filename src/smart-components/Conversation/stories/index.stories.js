@@ -11,7 +11,7 @@ export default { title: 'Channel' };
 const appId = process.env.STORYBOOK_APP_ID;;
 const userId = process.env.STORYBOOK_USER_ID || 'sendbird';
 // use your own channelURL
-const channelUrl = "sendbird-group-channel_2893930545";
+const channelUrl = process.env.STORYBOOK_CHANNEL_URL || 'sendbird-group-channel_3487930567';
 const frozenChannel = 'sendbird_group_channel_15698963_f98cd352627e2c97f3ed796e7f8a28a3c7984ce1';
 
 export const IndependantChannel = () => (
@@ -38,12 +38,12 @@ export const ChannelWithHiddenInfoIcon = () => (
 
 export const RenderMessageByType = () => (
   <Sendbird
-    appId={process.env.STORYBOOK_FROZEN_APP_ID}
-    userId={process.env.STORYBOOK_FROZEN_USER_ID}
+    appId={appId}
+    userId={userId}
   >
     <div style={{ height: '100vh' }}>
       <Channel
-        channelUrl={process.env.STORYBOOK_FROZEN_GROUP_ID}
+        channelUrl={channelUrl}
         renderCustomMessage={(message, channel) => {
           if (message.messageType === 'user') {
             return () => (
@@ -106,8 +106,8 @@ export const CustomChatItem = () => (
 );
 
 const CustomChatHeader = ({ channel, user }) => (
-<div style={{ border: '1px solid red' }}>{channel.name} / {user.nickname}</div>
-);
+  <div style={{ border: '1px solid red' }}>{channel.name} / {user.nickname}</div>
+  );
 
 const CustomInput = ({
   channel,

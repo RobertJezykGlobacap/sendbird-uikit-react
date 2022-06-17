@@ -62,9 +62,7 @@ exports[`ChatHeader should do a snapshot test of the ChatHeader DOM 1`] = `
     </span>
     <span
       className="sendbird-chat-header__left__subtitle sendbird-label sendbird-label--body-1 sendbird-label--color-onbackground-2"
-    >
-      Body text 2
-    </span>
+    />
   </div>
   <div
     className="sendbird-chat-header__right"

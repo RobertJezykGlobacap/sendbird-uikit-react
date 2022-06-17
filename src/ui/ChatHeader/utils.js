@@ -20,3 +20,7 @@ export const getChannelTitle = (channel = {}, currentUserId, stringSet = LabelSt
     .map(({ nickname }) => (nickname || stringSet.NO_NAME))
     .join(', ');
 };
+
+export const getChannelSubTitle = ({ members } = {}, currentUserId) => (
+  members?.length === 2 && members?.find((member) => member.userId !== currentUserId).metaData.email
+);

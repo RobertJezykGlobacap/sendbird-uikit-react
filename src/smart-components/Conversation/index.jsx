@@ -316,7 +316,7 @@ export const ConversationPanel = (props) => {
               showInfoIcon={showInfoIcon}
               onSearchClick={onSearchClick}
               onActionClick={onChatHeaderActionClick}
-              subTitle={currentGroupChannel.members && currentGroupChannel.members.length !== 2}
+              subTitle={currentGroupChannel.members && currentGroupChannel.members.length === 2}
               isMuted={false}
             />
           )
