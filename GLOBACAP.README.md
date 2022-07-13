@@ -12,3 +12,6 @@ Globacap fork of [sendbird-uikit](https://www.npmjs.com/package/globacap-sendbir
 - changes for suppressing `markAsDelivered` error on an origin branch in v2.7.1, brought to the fork, to keep fork in sync with a source and get rid of console error - [v2.7.1 changes](https://github.com/sendbird/sendbird-uikit-react/pull/143/files)
 - `showChangeThemeToggle` prop added for `<ChannelList />` for showing/hiding theme toggle in `<EditUserProfile />` component
 - added member's email address to `<ChannelPreview />` & `<UserListItem />` when exactly 2 members in channel
+
+2.7.11 changes
+- added new `disableAttachments` prop to `<MessageInput />` component

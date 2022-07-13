@@ -76,6 +76,7 @@ export const ConversationPanel = (props) => {
     onBeforeSendUserMessage,
     onBeforeSendFileMessage,
     onBeforeUpdateUserMessage,
+    disableAttachments,
   } = props;
   const { sdk } = sdkStore;
   const { config } = props;
@@ -415,6 +416,7 @@ export const ConversationPanel = (props) => {
           quoteMessage={quoteMessage}
           setQuoteMessage={setQuoteMessage}
           renderMessageInput={renderMessageInput}
+          disableAttachments={disableAttachments}
         />
         <div className="sendbird-conversation__footer__typing-indicator">
           <TypingIndicator className="sendbird-conversation__footer__typing-indicator__text" channelUrl={channelUrl} sb={sdk} logger={logger} />
@@ -523,6 +525,7 @@ ConversationPanel.propTypes = {
   disableUserProfile: PropTypes.bool,
   renderUserProfile: PropTypes.func,
   useMessageGrouping: PropTypes.bool,
+  disableAttachments: PropTypes.bool,
 };
 
 ConversationPanel.defaultProps = {
@@ -546,6 +549,7 @@ ConversationPanel.defaultProps = {
   renderUserProfile: null,
   useMessageGrouping: true,
   onChatHeaderActionClick: noop,
+  disableAttachments: false,
 };
 
 export const {

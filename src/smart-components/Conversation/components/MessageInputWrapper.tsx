@@ -21,6 +21,7 @@ interface Props {
   onFileUpload: (file: File, quoteMessage?: UserMessage | FileMessage) => void;
   setQuoteMessage: (message: UserMessage | FileMessage) => void;
   renderMessageInput: (renderProps: RenderGroupChannelMessageInputProps) => JSX.Element;
+  disableAttachments: boolean;
 }
 
 const MessageInputWrapper = ({
@@ -33,6 +34,7 @@ const MessageInputWrapper = ({
   onFileUpload,
   setQuoteMessage,
   renderMessageInput,
+  disableAttachments,
 }: Props, ref: React.RefObject<HTMLInputElement>): JSX.Element => {
   const { stringSet } = useContext(LocalizationContext);
   const disabled = !initialized
@@ -85,6 +87,7 @@ const MessageInputWrapper = ({
           onFileUpload(file, quoteMessage);
           setQuoteMessage(null);
         }}
+        disableAttachments={disableAttachments}
       />
     </div>
   );
