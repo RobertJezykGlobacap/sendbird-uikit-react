@@ -45,6 +45,7 @@ const MessageInput = React.forwardRef((props, ref) => {
     onCancelEdit,
     onStartTyping,
     channelUrl,
+    disableAttachments,
   } = props;
 
   const { stringSet } = useContext(LocalizationContext);
@@ -165,7 +166,7 @@ const MessageInput = React.forwardRef((props, ref) => {
         }
         {/* upload icon */}
         {
-          (!isEdit && (!inputValue || !(inputValue.trim().length > 0))) && (
+          (!disableAttachments && !isEdit && (!inputValue || !(inputValue.trim().length > 0))) && (
             <IconButton
               className="sendbird-message-input--attach"
               height="32px"
@@ -247,6 +248,7 @@ MessageInput.propTypes = {
   onStartTyping: PropTypes.func,
   onCancelEdit: PropTypes.func,
   channelUrl: PropTypes.string,
+  disableAttachments: PropTypes.bool,
 };
 
 MessageInput.defaultProps = {
