@@ -10,7 +10,11 @@ import withSendBird from '../../../lib/SendbirdSdkContext';
 
 export default { title: 'ChannelList' };
 
-const defaultQueries = { channelListQuery: {includeEmpty: true} };
+const defaultQueries = {
+  channelListQuery: {
+    includeEmpty: true,
+  },
+};
 
 export const IndependentChannelList = () => (
   <Sendbird
@@ -23,12 +27,15 @@ export const IndependentChannelList = () => (
   </Sendbird>
 );
 
-export const ChannelListWithSearchBox = () => {
+export const ChannelListWithSearchBoxes = () => {
   const [queries, setQueries] = useState({
     channelListQuery: {
       includeEmpty: true,
       nicknameContainsFilter: '',
-    }
+    },
+    applicationUserListQuery: {
+      nicknameStartsWithFilter: '',
+    },
   });
 
   const onChannelSearch = searchString => {
@@ -41,6 +48,16 @@ export const ChannelListWithSearchBox = () => {
     });
   };
 
+  const onUserSearch = searchString => {
+    setQueries({
+      ...queries,
+      applicationUserListQuery: {
+        ...queries.applicationUserListQuery,
+        nicknameStartsWithFilter: searchString,
+      },
+    });
+  };
+
   return (
     <Sendbird
       appId={appId}
@@ -48,9 +65,11 @@ export const ChannelListWithSearchBox = () => {
     >
       <div style={{ height: '100vh' }}>
         <ChannelList
-          onChannelSearch={onChannelSearch}
-          showChannelSearchBox
           queries={queries}
+          onChannelSearch={onChannelSearch}
+          onUserSearch={onUserSearch}
+          showChannelSearchBox
+          showUserSearchBox
         />
       </div>
     </Sendbird>

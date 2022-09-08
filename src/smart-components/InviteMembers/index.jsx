@@ -20,11 +20,14 @@ const InviteMembers = (props) => {
     idsToFilter,
     swapParams,
     singleUserChoice,
+    userFilledApplicationUserListQuery,
+    children,
   } = props;
 
   const [users, setUsers] = useState([]);
   const [selectedUsers, setSelectedUsers] = useState({});
   const { stringSet } = useContext(LocalizationContext);
+
   const [usersDataSource, setUsersDataSource] = useState({});
   const selectedCount = Object.keys(selectedUsers).length;
 
@@ -44,7 +47,7 @@ const InviteMembers = (props) => {
       }
       setUsers(users_);
     });
-  }, []);
+  }, [userFilledApplicationUserListQuery]);
 
   return (
     <Modal
@@ -67,6 +70,7 @@ const InviteMembers = (props) => {
         >
           {`${selectedCount} ${stringSet.MODAL__INVITE_MEMBER__SELECTEC}`}
         </Label>
+        {children}
         <div
           className="sendbird-create-channel--scroll"
           onScroll={(e) => {
@@ -125,6 +129,11 @@ InviteMembers.propTypes = {
   submitText: PropTypes.string,
   titleText: PropTypes.string,
   singleUserChoice: PropTypes.bool,
+  userFilledApplicationUserListQuery: PropTypes.object,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]),
 };
 InviteMembers.defaultProps = {
   swapParams: false,
@@ -132,6 +141,8 @@ InviteMembers.defaultProps = {
   titleText: 'Create new channel',
   idsToFilter: [],
   singleUserChoice: false,
+  userFilledApplicationUserListQuery: {},
+  children: null,
 };
 
 export default InviteMembers;

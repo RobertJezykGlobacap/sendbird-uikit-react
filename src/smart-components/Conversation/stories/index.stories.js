@@ -20,7 +20,7 @@ export const IndependantChannel = () => (
     userId={userId}
   >
     <div style={{ height: '100vh' }}>
-      <Channel channelUrl={channelUrl} />
+      <Channel channelUrl={channelUrl} disableAttachments />
     </div>
   </Sendbird>
 );

@@ -264,6 +264,7 @@ MessageInput.defaultProps = {
   onFileUpload: noop,
   onCancelEdit: noop,
   onStartTyping: noop,
+  disableAttachments: false,
 };
 
 export default MessageInput;

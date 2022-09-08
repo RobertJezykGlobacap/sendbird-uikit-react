@@ -15,3 +15,6 @@ Globacap fork of [sendbird-uikit](https://www.npmjs.com/package/globacap-sendbir
 
 2.7.11 changes
 - added new `disableAttachments` prop to `<MessageInput />` component
+
+2.8.2 
+- Adding <SearchBox /> for User Search to ChannelList component. Requires `showUserSearchBox` & `onUserSearch`

@@ -1,6 +1,6 @@
 {
   "name": "globacap-sendbird-uikit",
-  "version": "2.7.11",
+  "version": "2.8.2",
   "description": "React based UI kit for sendbird",
   "main": "dist/cjs/index.js",
   "style": "dist/index.css",
@@ -36,7 +36,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+git@github.com:sendbird/sendbird-uikit-react-sources.git"
+    "url": "git+git@github.com:RobertJezykGlobacap/sendbird-uikit-react-sources.git"
   },
   "author": "Robert Jezyk <robert.jezyk@globacap.com>",
   "license": "SEE LICENSE IN LICENSE.md",

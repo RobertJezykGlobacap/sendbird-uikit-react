@@ -61,6 +61,8 @@ function ChannelList(props) {
     oneToOneChannel,
     showChannelSearchBox,
     onChannelSearch,
+    showUserSearchBox,
+    onUserSearch,
     addChannelStringSet,
     channelPreviewStringSet,
     editUserProfileStringSet,
@@ -194,7 +196,9 @@ function ChannelList(props) {
               groupLabelText={addChannelStringSet.groupLabelText}
               onBeforeCreateChannel={onBeforeCreateChannel}
               oneToOneChannel={oneToOneChannel}
-            />
+            >
+              {showUserSearchBox && <SearchBox onSearch={onUserSearch} wrapperStyle={{ padding: '16px 0' }} />}
+            </AddChannel>
           )}
         />
       </div>
@@ -219,7 +223,7 @@ function ChannelList(props) {
         )
       }
 
-      {showChannelSearchBox && <SearchBox onChannelSearch={onChannelSearch} />}
+      {showChannelSearchBox && <SearchBox onSearch={onChannelSearch} />}
 
       <div
         className="sendbird-channel-list__body"
@@ -434,7 +438,10 @@ ChannelList.propTypes = {
     PropTypes.func,
   ]),
   onChannelSelect: PropTypes.func,
+  showChannelSearchBox: PropTypes.bool,
   onChannelSearch: PropTypes.func,
+  showUserSearchBox: PropTypes.bool,
+  onUserSearch: PropTypes.func,
   addChannelStringSet: PropTypes.shape({
     headerText: PropTypes.string,
     groupLabelText: PropTypes.string,
@@ -447,7 +454,6 @@ ChannelList.propTypes = {
   }),
   disableAutoSelect: PropTypes.bool,
   oneToOneChannel: PropTypes.bool,
-  showChannelSearchBox: PropTypes.bool,
 };
 
 ChannelList.defaultProps = {
@@ -468,6 +474,8 @@ ChannelList.defaultProps = {
   oneToOneChannel: false,
   showChannelSearchBox: false,
   onChannelSearch: noop,
+  showUserSearchBox: true,
+  onUserSearch: noop,
   addChannelStringSet: {
     headerText: '',
     groupLabelText: '',

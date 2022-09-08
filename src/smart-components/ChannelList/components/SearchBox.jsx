@@ -12,27 +12,27 @@ import './search-box.scss';
 const EMPTY_STRING = '';
 const COMPONENT_CLASS_NAME = 'sendbird-channel-search-box';
 
-const SearchBox = ({ onChannelSearch, debounceInMilliseconds, ...domAttributes }) => {
-  const [channelSearchString, setChannelSearchString] = useState(EMPTY_STRING);
+const SearchBox = ({ onSearch, debounceInMilliseconds, wrapperStyle, ...inputDomAttributes }) => {
+  const [channelSearchString, setSearchString] = useState(EMPTY_STRING);
   const { stringSet } = useContext(LocalizationContext);
   const searchRef = useRef(null);
 
   const handleOnChange = ({ target }) => {
     const { value } = target;
 
-    setChannelSearchString(value);
-    onChannelSearch(value);
+    setSearchString(value);
+    onSearch(value);
   };
 
   const resetSearchString = () => {
     searchRef.current.value = EMPTY_STRING;
-    setChannelSearchString(EMPTY_STRING);
-    onChannelSearch(EMPTY_STRING);
+    setSearchString(EMPTY_STRING);
+    onSearch(EMPTY_STRING);
   };
 
   const debouncedHandleOnChange = useMemo(
     () => debounce(handleOnChange, debounceInMilliseconds),
-    [onChannelSearch],
+    [onSearch],
   );
 
   useEffect(() => () => {
@@ -40,7 +40,7 @@ const SearchBox = ({ onChannelSearch, debounceInMilliseconds, ...domAttributes }
   }, []);
 
   return (
-    <div className={`${COMPONENT_CLASS_NAME}__input`}>
+    <div className={`${COMPONENT_CLASS_NAME}__input`} style={wrapperStyle}>
       <div className={`${COMPONENT_CLASS_NAME}__input__container`}>
         <Icon
           className={`${COMPONENT_CLASS_NAME}__input__container__search-icon`}
@@ -55,7 +55,7 @@ const SearchBox = ({ onChannelSearch, debounceInMilliseconds, ...domAttributes }
           placeholder={stringSet.SEARCH}
           ref={searchRef}
           onChange={debouncedHandleOnChange}
-          {...domAttributes} // eslint-disable-line react/jsx-props-no-spreading
+          {...inputDomAttributes} // eslint-disable-line react/jsx-props-no-spreading
         />
         {channelSearchString && (
           <Icon
@@ -73,12 +73,14 @@ const SearchBox = ({ onChannelSearch, debounceInMilliseconds, ...domAttributes }
 };
 
 SearchBox.propTypes = {
-  onChannelSearch: PropTypes.func,
+  onSearch: PropTypes.func,
+  wrapperStyle: PropTypes.object,
   debounceInMilliseconds: PropTypes.number,
 };
 
 SearchBox.defaultProps = {
-  onChannelSearch: () => {},
+  onSearch: () => {},
+  wrapperStyle: {},
   debounceInMilliseconds: 400,
 };
 

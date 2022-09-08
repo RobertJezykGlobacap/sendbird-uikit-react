@@ -29,6 +29,7 @@ export default function AddChannel({
   oneToOneChannel,
   headerText,
   groupLabelText,
+  children,
 }) {
   const [showModal, setShowModal] = useState(false);
   const [step, setStep] = useState(0);
@@ -183,7 +184,10 @@ export default function AddChannel({
               });
             })}
             singleUserChoice={oneToOneChannel}
-          />
+            userFilledApplicationUserListQuery={userFilledApplicationUserListQuery}
+          >
+            {children}
+          </InviteMembers>
         )
       }
     </>
@@ -204,6 +208,10 @@ AddChannel.propTypes = {
   groupLabelText: PropTypes.string,
   oneToOneChannel: PropTypes.bool,
   disabled: PropTypes.bool,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]),
 };
 
 AddChannel.defaultProps = {
@@ -214,4 +222,5 @@ AddChannel.defaultProps = {
   groupLabelText: '',
   oneToOneChannel: false,
   disabled: false,
+  children: null,
 };
