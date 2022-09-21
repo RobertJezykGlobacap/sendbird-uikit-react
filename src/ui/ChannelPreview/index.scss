@@ -83,6 +83,7 @@
       .sendbird-channel-preview__content__lower__last-message {
         overflow: hidden;
         text-overflow: ellipsis;
+        white-space: nowrap;
       }
 
       .sendbird-channel-preview__content__lower__unread-message-count {
