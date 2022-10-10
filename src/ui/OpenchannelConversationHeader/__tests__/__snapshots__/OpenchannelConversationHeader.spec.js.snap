@@ -11,7 +11,7 @@ exports[`OpenchannelConversationHeader should do a snapshot test of the Openchan
       className="sendbird-openchannel-conversation-header__left__cover-image sendbird-avatar"
       role="button"
       style={
-        Object {
+        {
           "height": "32px",
           "width": "32px",
         }
@@ -21,7 +21,7 @@ exports[`OpenchannelConversationHeader should do a snapshot test of the Openchan
       <div
         className="sendbird-avatar-img sendbird-image-renderer"
         style={
-          Object {
+          {
             "height": "32px",
             "maxWidth": "400px",
             "minWidth": "32px",
@@ -32,7 +32,7 @@ exports[`OpenchannelConversationHeader should do a snapshot test of the Openchan
         <div
           className="sendbird-image-renderer__image"
           style={
-            Object {
+            {
               "backgroundImage": "url(https://static.sendbird.com/sample/user_sdk/user_sdk_20.png)",
               "backgroundPosition": "center",
               "backgroundRepeat": "no-repeat",
@@ -75,7 +75,7 @@ exports[`OpenchannelConversationHeader should do a snapshot test of the Openchan
       onBlur={[Function]}
       onClick={[Function]}
       style={
-        Object {
+        {
           "height": "32px",
           "width": "32px",
         }
@@ -91,7 +91,7 @@ exports[`OpenchannelConversationHeader should do a snapshot test of the Openchan
           onKeyDown={[Function]}
           role="button"
           style={
-            Object {
+            {
               "height": "24px",
               "minHeight": "24px",
               "minWidth": "24px",

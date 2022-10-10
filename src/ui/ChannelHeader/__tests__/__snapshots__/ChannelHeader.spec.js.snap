@@ -18,7 +18,7 @@ exports[`ChannelHeader should create a snapshot of a default ChannelHeader compo
         className=" sendbird-avatar"
         role="button"
         style={
-          Object {
+          {
             "height": "32px",
             "width": "32px",
           }
@@ -28,7 +28,7 @@ exports[`ChannelHeader should create a snapshot of a default ChannelHeader compo
         <div
           className="sendbird-avatar-img sendbird-image-renderer"
           style={
-            Object {
+            {
               "height": "32px",
               "maxWidth": "400px",
               "minWidth": "32px",
@@ -39,7 +39,7 @@ exports[`ChannelHeader should create a snapshot of a default ChannelHeader compo
           <div
             className="sendbird-image-renderer__image"
             style={
-              Object {
+              {
                 "backgroundImage": "url()",
                 "backgroundPosition": "center",
                 "backgroundRepeat": "no-repeat",

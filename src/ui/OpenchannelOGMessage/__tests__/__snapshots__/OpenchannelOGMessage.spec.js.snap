@@ -19,7 +19,7 @@ exports[`OpenchannelOGMessage should do a snapshot test of the OpenchannelOGMess
           onKeyDown={[Function]}
           role="button"
           style={
-            Object {
+            {
               "height": "28px",
               "width": "28px",
             }
@@ -29,7 +29,7 @@ exports[`OpenchannelOGMessage should do a snapshot test of the OpenchannelOGMess
           <div
             className="sendbird-avatar-img sendbird-image-renderer"
             style={
-              Object {
+              {
                 "height": "28px",
                 "maxWidth": "400px",
                 "minWidth": "28px",
@@ -40,7 +40,7 @@ exports[`OpenchannelOGMessage should do a snapshot test of the OpenchannelOGMess
             <div
               className="sendbird-image-renderer__image"
               style={
-                Object {
+                {
                   "backgroundImage": "url(https://static.sendbird.com/sample/profiles/profile_12_512px.png)",
                   "backgroundPosition": "center",
                   "backgroundRepeat": "no-repeat",
@@ -113,7 +113,7 @@ exports[`OpenchannelOGMessage should do a snapshot test of the OpenchannelOGMess
     </div>
     <div
       className="sendbird-openchannel-og-message__top__context-menu"
-      style={Object {}}
+      style={{}}
     >
       <div
         className="sendbird-context-menu"
@@ -124,7 +124,7 @@ exports[`OpenchannelOGMessage should do a snapshot test of the OpenchannelOGMess
           onBlur={[Function]}
           onClick={[Function]}
           style={
-            Object {
+            {
               "height": "32px",
               "width": "32px",
             }
@@ -140,7 +140,7 @@ exports[`OpenchannelOGMessage should do a snapshot test of the OpenchannelOGMess
               onKeyDown={[Function]}
               role="button"
               style={
-                Object {
+                {
                   "height": "24px",
                   "minHeight": "24px",
                   "minWidth": "24px",
@@ -194,7 +194,7 @@ exports[`OpenchannelOGMessage should do a snapshot test of the OpenchannelOGMess
         <div
           className="sendbird-openchannel-og-message__bottom__og-tag__thumbnail__image sendbird-image-renderer"
           style={
-            Object {
+            {
               "height": "189px",
               "maxWidth": "400px",
               "minWidth": null,
@@ -205,7 +205,7 @@ exports[`OpenchannelOGMessage should do a snapshot test of the OpenchannelOGMess
           <div
             className="sendbird-image-renderer__image"
             style={
-              Object {
+              {
                 "backgroundImage": "url(https://static.sendbird.com/sample/profiles/profile_12_512px.png)",
                 "backgroundPosition": "center",
                 "backgroundRepeat": "no-repeat",

@@ -4,7 +4,7 @@ exports[`Checkbox should do a snapshot test of the checked Checkbox DOM 1`] = `
 <label
   className="sendbird-checkbox"
   htmlFor="sendbird-checkbox-input"
-  style={Object {}}
+  style={{}}
 >
   <input
     checked={true}
@@ -22,7 +22,7 @@ exports[`Checkbox should do a snapshot test of the default Checkbox DOM 1`] = `
 <label
   className="sendbird-checkbox"
   htmlFor="sendbird-checkbox-input"
-  style={Object {}}
+  style={{}}
 >
   <input
     checked={false}

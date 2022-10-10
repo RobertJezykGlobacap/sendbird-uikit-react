@@ -20,7 +20,7 @@ exports[`ReactionBadge should do a snapshot test of the ReactionBadge DOM 1`] = 
         onKeyDown={[Function]}
         role="button"
         style={
-          Object {
+          {
             "height": "20px",
             "minHeight": "20px",
             "minWidth": "20px",

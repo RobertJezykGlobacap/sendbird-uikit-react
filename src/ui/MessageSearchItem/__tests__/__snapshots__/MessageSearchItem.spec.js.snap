@@ -12,7 +12,7 @@ exports[`MessageSearchItem should do a snapshot test of the MessageSearchItem DO
       className="sendbird-message-search-item__left__sender-avatar sendbird-avatar"
       role="button"
       style={
-        Object {
+        {
           "height": "56px",
           "width": "56px",
         }
@@ -22,7 +22,7 @@ exports[`MessageSearchItem should do a snapshot test of the MessageSearchItem DO
       <div
         className="sendbird-avatar-img sendbird-image-renderer"
         style={
-          Object {
+          {
             "height": "56px",
             "maxWidth": "400px",
             "minWidth": "56px",
@@ -33,7 +33,7 @@ exports[`MessageSearchItem should do a snapshot test of the MessageSearchItem DO
         <div
           className="sendbird-image-renderer__image"
           style={
-            Object {
+            {
               "backgroundImage": "url(https://static.sendbird.com/sample/profiles/profile_33_512px.png)",
               "backgroundPosition": "center",
               "backgroundRepeat": "no-repeat",

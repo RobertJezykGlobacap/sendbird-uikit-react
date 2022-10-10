@@ -4,7 +4,7 @@ exports[`Loader should do a snapshot test of the default Loader DOM 1`] = `
 <div
   className=" sendbird-loader"
   style={
-    Object {
+    {
       "height": "26px",
       "width": "26px",
     }
@@ -16,7 +16,7 @@ exports[`Loader should do a snapshot test of the default Loader DOM 1`] = `
     onKeyDown={[Function]}
     role="button"
     style={
-      Object {
+      {
         "height": "26px",
         "minHeight": "26px",
         "minWidth": "26px",

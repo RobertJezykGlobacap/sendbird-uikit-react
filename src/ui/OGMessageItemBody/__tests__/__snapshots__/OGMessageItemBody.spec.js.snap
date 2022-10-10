@@ -18,7 +18,7 @@ exports[`OGMessageItemBody should do a snapshot test of the OGMessageItemBody DO
     <div
       className="sendbird-og-message-item-body__og-thumbnail__image sendbird-image-renderer"
       style={
-        Object {
+        {
           "height": "180px",
           "maxWidth": "400px",
           "minWidth": "320px",
@@ -29,7 +29,7 @@ exports[`OGMessageItemBody should do a snapshot test of the OGMessageItemBody DO
       <div
         className="sendbird-image-renderer__image"
         style={
-          Object {
+          {
             "backgroundImage": "url()",
             "backgroundPosition": "center",
             "backgroundRepeat": "no-repeat",

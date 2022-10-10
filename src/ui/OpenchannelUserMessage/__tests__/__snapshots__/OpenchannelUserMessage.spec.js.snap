@@ -16,7 +16,7 @@ exports[`OpenchannelUserMessage should do a snapshot test of the OpenchannelUser
         onKeyDown={[Function]}
         role="button"
         style={
-          Object {
+          {
             "height": "28px",
             "width": "28px",
           }
@@ -26,7 +26,7 @@ exports[`OpenchannelUserMessage should do a snapshot test of the OpenchannelUser
         <div
           className="sendbird-avatar-img sendbird-image-renderer"
           style={
-            Object {
+            {
               "height": "28px",
               "maxWidth": "400px",
               "minWidth": "28px",
@@ -37,7 +37,7 @@ exports[`OpenchannelUserMessage should do a snapshot test of the OpenchannelUser
           <div
             className="sendbird-image-renderer__image"
             style={
-              Object {
+              {
                 "backgroundImage": "url(https://static.sendbird.com/sample/profiles/profile_12_512px.png)",
                 "backgroundPosition": "center",
                 "backgroundRepeat": "no-repeat",
@@ -91,7 +91,7 @@ exports[`OpenchannelUserMessage should do a snapshot test of the OpenchannelUser
   </div>
   <div
     className="sendbird-openchannel-user-message__context-menu"
-    style={Object {}}
+    style={{}}
   >
     <div
       className="sendbird-context-menu"
@@ -102,7 +102,7 @@ exports[`OpenchannelUserMessage should do a snapshot test of the OpenchannelUser
         onBlur={[Function]}
         onClick={[Function]}
         style={
-          Object {
+          {
             "height": "32px",
             "width": "32px",
           }
@@ -118,7 +118,7 @@ exports[`OpenchannelUserMessage should do a snapshot test of the OpenchannelUser
             onKeyDown={[Function]}
             role="button"
             style={
-              Object {
+              {
                 "height": "24px",
                 "minHeight": "24px",
                 "minWidth": "24px",

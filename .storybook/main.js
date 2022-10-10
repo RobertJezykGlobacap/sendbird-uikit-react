@@ -9,6 +9,9 @@ module.exports = {
     '@storybook/addon-links',
     '@storybook/preset-scss',
   ],
+  typescript: {
+    reactDocgen: 'none',
+  },
   webpackFinal: async (config, { configType }) => {
     const fileLoaderRule = config.module.rules.find(
       (rule) => !Array.isArray(rule.test) && rule.test.test(".svg"),

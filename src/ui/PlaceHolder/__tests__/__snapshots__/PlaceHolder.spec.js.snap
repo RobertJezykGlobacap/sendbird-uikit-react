@@ -13,7 +13,7 @@ exports[`PlaceHolder should do a snapshot test of the PlaceHolder DOM 1`] = `
       onKeyDown={[Function]}
       role="button"
       style={
-        Object {
+        {
           "height": "64px",
           "minHeight": "64px",
           "minWidth": "64px",

@@ -14,9 +14,9 @@ import {
 
 const Modal = ({
   children,
-  isOpen = false,
-  modalRoot = MODAL_ROOT,
-  className = '',
+  isOpen,
+  modalRoot,
+  className,
 }) => {
   if (isOpen === false) {
     return null;
@@ -29,6 +29,20 @@ const Modal = ({
     document.getElementById(modalRoot),
   );
 };
+
+Modal.propTypes = {
+  isOpen: PropTypes.bool,
+  modalRoot: PropTypes.string,
+  className: PropTypes.string,
+};
+
+/* eslint-disable react/require-default-props */
+Modal.defaultProps = {
+  isOpen: false,
+  modalRoot: MODAL_ROOT,
+  className: '',
+};
+/* eslint-enable react/require-default-props */
 
 const useModal = (className) => {
   const [isOpen, setOpen] = useState(false);

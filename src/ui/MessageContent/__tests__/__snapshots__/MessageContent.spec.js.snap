@@ -18,7 +18,7 @@ exports[`MessageContent should do a snapshot test of the MessageContent DOM 1`] 
         onKeyDown={[Function]}
         role="button"
         style={
-          Object {
+          {
             "height": "28px",
             "width": "28px",
           }
@@ -28,7 +28,7 @@ exports[`MessageContent should do a snapshot test of the MessageContent DOM 1`] 
         <div
           className="sendbird-avatar-img sendbird-image-renderer"
           style={
-            Object {
+            {
               "height": "28px",
               "maxWidth": "400px",
               "minWidth": "28px",
@@ -39,7 +39,7 @@ exports[`MessageContent should do a snapshot test of the MessageContent DOM 1`] 
           <div
             className="sendbird-image-renderer__image"
             style={
-              Object {
+              {
                 "backgroundImage": "url()",
                 "backgroundPosition": "center",
                 "backgroundRepeat": "no-repeat",
@@ -109,7 +109,7 @@ exports[`MessageContent should do a snapshot test of the MessageContent DOM 1`] 
             onBlur={[Function]}
             onClick={[Function]}
             style={
-              Object {
+              {
                 "height": "32px",
                 "width": "32px",
               }
@@ -125,7 +125,7 @@ exports[`MessageContent should do a snapshot test of the MessageContent DOM 1`] 
                 onKeyDown={[Function]}
                 role="button"
                 style={
-                  Object {
+                  {
                     "height": "24px",
                     "minHeight": "24px",
                     "minWidth": "24px",

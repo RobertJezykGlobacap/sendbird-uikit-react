@@ -15,7 +15,7 @@ exports[`ConnectionStatus should render ConnectionStatus 1`] = `
     onKeyDown={[Function]}
     role="button"
     style={
-      Object {
+      {
         "height": "14px",
         "minHeight": "14px",
         "minWidth": "14px",

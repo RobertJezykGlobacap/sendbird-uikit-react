@@ -17,7 +17,7 @@ exports[`FileViewer should do a snapshot test of the FileViewer DOM 1`] = `
           className=" sendbird-avatar"
           role="button"
           style={
-            Object {
+            {
               "height": "32px",
               "width": "32px",
             }
@@ -27,7 +27,7 @@ exports[`FileViewer should do a snapshot test of the FileViewer DOM 1`] = `
           <div
             className="sendbird-avatar-img sendbird-image-renderer"
             style={
-              Object {
+              {
                 "height": "32px",
                 "maxWidth": "400px",
                 "minWidth": "32px",
@@ -38,7 +38,7 @@ exports[`FileViewer should do a snapshot test of the FileViewer DOM 1`] = `
             <div
               className="sendbird-image-renderer__image"
               style={
-                Object {
+                {
                   "backgroundImage": "url(https://static.sendbird.com/sample/profiles/profile_15_512px.png)",
                   "backgroundPosition": "center",
                   "backgroundRepeat": "no-repeat",
@@ -91,7 +91,7 @@ exports[`FileViewer should do a snapshot test of the FileViewer DOM 1`] = `
             onKeyDown={[Function]}
             role="button"
             style={
-              Object {
+              {
                 "height": "24px",
                 "minHeight": "24px",
                 "minWidth": "24px",
@@ -112,7 +112,7 @@ exports[`FileViewer should do a snapshot test of the FileViewer DOM 1`] = `
             onKeyDown={[Function]}
             role="button"
             style={
-              Object {
+              {
                 "height": "24px",
                 "minHeight": "24px",
                 "minWidth": "24px",
@@ -134,7 +134,7 @@ exports[`FileViewer should do a snapshot test of the FileViewer DOM 1`] = `
           onKeyDown={[Function]}
           role="button"
           style={
-            Object {
+            {
               "height": "24px",
               "minHeight": "24px",
               "minWidth": "24px",

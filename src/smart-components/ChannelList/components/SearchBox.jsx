@@ -12,7 +12,12 @@ import './search-box.scss';
 const EMPTY_STRING = '';
 const COMPONENT_CLASS_NAME = 'sendbird-channel-search-box';
 
-const SearchBox = ({ onSearch, debounceInMilliseconds, wrapperStyle, ...inputDomAttributes }) => {
+const SearchBox = ({
+  onSearch,
+  debounceInMilliseconds,
+  wrapperStyle,
+  ...inputDomAttributes
+}) => {
   const [channelSearchString, setSearchString] = useState(EMPTY_STRING);
   const { stringSet } = useContext(LocalizationContext);
   const searchRef = useRef(null);

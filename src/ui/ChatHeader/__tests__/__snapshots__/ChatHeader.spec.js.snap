@@ -11,7 +11,7 @@ exports[`ChatHeader should do a snapshot test of the ChatHeader DOM 1`] = `
       className="sendbird-chat-header--avatar--group-channel sendbird-avatar"
       role="button"
       style={
-        Object {
+        {
           "height": "32px",
           "width": "32px",
         }
@@ -21,7 +21,7 @@ exports[`ChatHeader should do a snapshot test of the ChatHeader DOM 1`] = `
       <div
         className="sendbird-avatar-img sendbird-image-renderer"
         style={
-          Object {
+          {
             "height": "32px",
             "maxWidth": "400px",
             "minWidth": "32px",
@@ -32,7 +32,7 @@ exports[`ChatHeader should do a snapshot test of the ChatHeader DOM 1`] = `
         <div
           className="sendbird-image-renderer__image"
           style={
-            Object {
+            {
               "backgroundImage": "url()",
               "backgroundPosition": "center",
               "backgroundRepeat": "no-repeat",
@@ -73,7 +73,7 @@ exports[`ChatHeader should do a snapshot test of the ChatHeader DOM 1`] = `
       onKeyDown={[Function]}
       role="button"
       style={
-        Object {
+        {
           "height": "24px",
           "minHeight": "24px",
           "minWidth": "24px",
@@ -90,7 +90,7 @@ exports[`ChatHeader should do a snapshot test of the ChatHeader DOM 1`] = `
       onBlur={[Function]}
       onClick={[Function]}
       style={
-        Object {
+        {
           "height": "32px",
           "width": "32px",
         }
@@ -106,7 +106,7 @@ exports[`ChatHeader should do a snapshot test of the ChatHeader DOM 1`] = `
           onKeyDown={[Function]}
           role="button"
           style={
-            Object {
+            {
               "height": "24px",
               "minHeight": "24px",
               "minWidth": "24px",

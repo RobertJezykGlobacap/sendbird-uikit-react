@@ -13,7 +13,7 @@ exports[`MessageItemMenu should do a snapshot test of the MessageItemMenu DOM 1`
       onBlur={[Function]}
       onClick={[Function]}
       style={
-        Object {
+        {
           "height": "32px",
           "width": "32px",
         }
@@ -29,7 +29,7 @@ exports[`MessageItemMenu should do a snapshot test of the MessageItemMenu DOM 1`
           onKeyDown={[Function]}
           role="button"
           style={
-            Object {
+            {
               "height": "24px",
               "minHeight": "24px",
               "minWidth": "24px",

@@ -13,7 +13,7 @@ exports[`MessageItemReactionMenu should do a snapshot test of the MessageItemRea
       onBlur={[Function]}
       onClick={[Function]}
       style={
-        Object {
+        {
           "height": "32px",
           "width": "32px",
         }
@@ -29,7 +29,7 @@ exports[`MessageItemReactionMenu should do a snapshot test of the MessageItemRea
           onKeyDown={[Function]}
           role="button"
           style={
-            Object {
+            {
               "height": "24px",
               "minHeight": "24px",
               "minWidth": "24px",

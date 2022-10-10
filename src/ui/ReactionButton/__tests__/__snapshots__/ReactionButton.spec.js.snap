@@ -7,7 +7,7 @@ exports[`ReactionButton should do a snapshot test of the ReactionButton DOM 1`] 
   onKeyDown={[Function]}
   role="button"
   style={
-    Object {
+    {
       "height": "34px",
       "width": "34px",
     }
@@ -23,7 +23,7 @@ exports[`ReactionButton should do a snapshot test of the ReactionButton DOM 1`] 
       onKeyDown={[Function]}
       role="button"
       style={
-        Object {
+        {
           "height": "28px",
           "minHeight": "28px",
           "minWidth": "28px",

@@ -13,7 +13,7 @@ exports[`FileMessageItemBody should do a snapshot test of the FileMessageItemBod
       onKeyDown={[Function]}
       role="button"
       style={
-        Object {
+        {
           "height": "24px",
           "minHeight": "24px",
           "minWidth": "24px",

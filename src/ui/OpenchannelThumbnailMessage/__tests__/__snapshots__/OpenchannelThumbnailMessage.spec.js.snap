@@ -16,7 +16,7 @@ exports[`OpenchannelThumbnailMessage should do a snapshot test of the Openchanne
         onKeyDown={[Function]}
         role="button"
         style={
-          Object {
+          {
             "height": "28px",
             "width": "28px",
           }
@@ -26,7 +26,7 @@ exports[`OpenchannelThumbnailMessage should do a snapshot test of the Openchanne
         <div
           className="sendbird-avatar-img sendbird-image-renderer"
           style={
-            Object {
+            {
               "height": "28px",
               "maxWidth": "400px",
               "minWidth": "28px",
@@ -37,7 +37,7 @@ exports[`OpenchannelThumbnailMessage should do a snapshot test of the Openchanne
           <div
             className="sendbird-image-renderer__image"
             style={
-              Object {
+              {
                 "backgroundImage": "url(https://static.sendbird.com/sample/profiles/profile_15_512px.png)",
                 "backgroundPosition": "center",
                 "backgroundRepeat": "no-repeat",
@@ -95,7 +95,7 @@ exports[`OpenchannelThumbnailMessage should do a snapshot test of the Openchanne
         <div
           className="sendbird-openchannel-thumbnail-message__right__body__wrap__image sendbird-image-renderer"
           style={
-            Object {
+            {
               "height": "270px",
               "maxWidth": "400px",
               "minWidth": 360,
@@ -105,7 +105,7 @@ exports[`OpenchannelThumbnailMessage should do a snapshot test of the Openchanne
         >
           <div
             style={
-              Object {
+              {
                 "alignItems": "center",
                 "display": "flex",
                 "height": "270px",
@@ -123,7 +123,7 @@ exports[`OpenchannelThumbnailMessage should do a snapshot test of the Openchanne
               onKeyDown={[Function]}
               role="button"
               style={
-                Object {
+                {
                   "height": "56px",
                   "minHeight": "56px",
                   "minWidth": "56px",
@@ -138,7 +138,7 @@ exports[`OpenchannelThumbnailMessage should do a snapshot test of the Openchanne
           <div
             className="sendbird-image-renderer__image"
             style={
-              Object {
+              {
                 "backgroundImage": "url(https://sendbird-staging.s3.amazonaws.com/26FA710D-A7F6-4483-ABEA-1F07A07A112E/upload/n/e49e0a4111d4445a8840bd51f3c9d933.png)",
                 "backgroundPosition": "center",
                 "backgroundRepeat": "no-repeat",
@@ -175,7 +175,7 @@ exports[`OpenchannelThumbnailMessage should do a snapshot test of the Openchanne
         onBlur={[Function]}
         onClick={[Function]}
         style={
-          Object {
+          {
             "height": "32px",
             "width": "32px",
           }
@@ -191,7 +191,7 @@ exports[`OpenchannelThumbnailMessage should do a snapshot test of the Openchanne
             onKeyDown={[Function]}
             role="button"
             style={
-              Object {
+              {
                 "height": "24px",
                 "minHeight": "24px",
                 "minWidth": "24px",

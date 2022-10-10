@@ -7,7 +7,7 @@ exports[`Icon should do a snapshot test of the defualt Icon DOM 1`] = `
   onKeyDown={[Function]}
   role="button"
   style={
-    Object {
+    {
       "height": "26px",
       "minHeight": "26px",
       "minWidth": "26px",

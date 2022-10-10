@@ -8,7 +8,7 @@ exports[`ThumbnailMessageItemBody should do a snapshot test of the ThumbnailMess
   <div
     className="sendbird-thumbnail-message-item-body__thumbnail sendbird-image-renderer"
     style={
-      Object {
+      {
         "height": "270px",
         "maxWidth": "400px",
         "minWidth": "360px",
@@ -19,8 +19,8 @@ exports[`ThumbnailMessageItemBody should do a snapshot test of the ThumbnailMess
     <div
       className="sendbird-thumbnail-message-item-body__placeholder"
       style={
-        Object {
-          "style": Object {
+        {
+          "style": {
             "alignItems": "center",
             "display": "flex",
             "height": "270px",
@@ -42,7 +42,7 @@ exports[`ThumbnailMessageItemBody should do a snapshot test of the ThumbnailMess
           onKeyDown={[Function]}
           role="button"
           style={
-            Object {
+            {
               "height": "34px",
               "minHeight": "34px",
               "minWidth": "34px",
@@ -58,7 +58,7 @@ exports[`ThumbnailMessageItemBody should do a snapshot test of the ThumbnailMess
     <div
       className="sendbird-image-renderer__image"
       style={
-        Object {
+        {
           "backgroundImage": "url(https://static.sendbird.com/sample/user_sdk/user_sdk_25.png)",
           "backgroundPosition": "center",
           "backgroundRepeat": "no-repeat",
